@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-gradient {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(72, 187, 120, 0.4) 0%, rgba(72, 187, 120, 0) 100%);
+        }
+        .progress-ring {
+            background: conic-gradient(#48bb78 85%, #e2e8f0 0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+
+    <div class="max-w-7xl mx-auto flex">
+        <aside class="w-64 bg-white p-6 rounded-3xl shadow-sm h-min">
+            <div class="flex items-center space-x-2 mb-8">
+                <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+                <span class="text-xl font-bold">Dashboard</span>
+            </div>
+            <nav class="space-y-4">
+                <a href="#" class="flex items-center space-x-3 text-gray-700 bg-gray-100 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <span>My Notes</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                    <span>Tests & Quizzes</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <span>Communities</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <span>AI Tutor</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    <span>Progress</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 ml-8">
+            <header class="flex justify-between items-center mb-8">
+                <div class="relative w-96">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
+                    </span>
+                    <input type="text" class="w-full py-3 pl-10 pr-4 bg-white rounded-xl shadow-sm focus:outline-none" placeholder="Search...">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 bg-white rounded-full shadow-sm relative">
+                        <svg class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+                        <span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white"></span>
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <img class="h-10 w-10 rounded-full" src="https://ui-avatars.com/api/?name=Dr+Emily+Chen&background=0D8ABC&color=fff" alt="Dr. Emily Chen">
+                        <div>
+                            <p class="text-sm font-semibold text-gray-800">Dr. Emily Chen</p>
+                            <p class="text-xs text-gray-500">Teacher</p>
+                        </div>
+                        <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </div>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-12 gap-8 mb-8">
+                <div class="col-span-8 custom-gradient p-8 rounded-3xl shadow-sm relative overflow-hidden">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Welcome back, Emily!</h2>
+                    <p class="text-gray-700 mb-6">Here's your AI study summary</p>
+                    <div class="relative h-40">
+                        <div class="absolute inset-0 flex items-end justify-between px-4 z-10 pointer-events-none">
+                            <span class="text-xs text-gray-500">Mon</span>
+                            <span class="text-xs text-gray-500">Tue</span>
+                            <span class="text-xs text-gray-500">Wed</span>
+                            <span class="text-xs text-gray-500">Thu</span>
+                            <span class="text-xs text-gray-500">Fri</span>
+                            <span class="text-xs text-gray-500">Sat</span>
+                        </div>
+                        <svg class="w-full h-full" viewBox="0 0 300 100" preserveAspectRatio="none">
+                            <path d="M0 100 L0 60 C50 80, 100 40, 150 50 C200 60, 250 20, 300 30 L300 100 Z" class="chart-gradient" fill="currentColor" style="color: #48bb78;"></path>
+                            <path d="M0 60 C50 80, 100 40, 150 50 C200 60, 250 20, 300 30" stroke="#48bb78" stroke-width="3" fill="none"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-span-4 space-y-8">
+                    <div class="bg-white p-6 rounded-3xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Study streaks</h3>
+                        <div class="flex justify-between">
+                            <div class="flex flex-col items-center"><div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">M</div><span class="text-xs mt-2 text-gray-500">Mon</span></div>
+                            <div class="flex flex-col items-center"><div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">T</div><span class="text-xs mt-2 text-gray-500">Tue</span></div>
+                            <div class="flex flex-col items-center"><div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">W</div><span class="text-xs mt-2 text-gray-500">Wed</span></div>
+                            <div class="flex flex-col items-center"><div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-bold">3</div><span class="text-xs mt-2 text-gray-500">Thu</span></div>
+                            <div class="flex flex-col items-center"><div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-bold">0</div><span class="text-xs mt-2 text-gray-500">Fri</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl shadow-sm flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-xl">
+                            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M16.243 16.243l-.707-.707m-5.657 0l-.707.707M3 12H2m1.636-6.364l.707-.707M6.343 17.657l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Personalized AI recommendations</h3>
+                            <p class="text-sm text-gray-600 mt-1">Personalized AI recommendations for new variation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Notes</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-green-100 text-green-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></span><span class="text-gray-700">Biology Unit 3: Genetics</span></li>
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-blue-100 text-blue-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></span><span class="text-gray-700">History Essay Outline</span></li>
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-purple-100 text-purple-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></span><span class="text-gray-700">Math Formulas</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Upcoming Tests</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3"><svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700">Physics Midterm - Oct 25</span></li>
+                        <li class="flex items-center space-x-3"><svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700">Literature Quiz - Nov 1</span></li>
+                        <li class="flex items-center space-x-3"><svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700">Literature Quiz - Nov 8</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">My Communities</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-blue-100 text-blue-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></span><span class="text-gray-700">AP Chem Study Group</span></li>
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-green-100 text-green-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></span><span class="text-gray-700">Design Thinking Class</span></li>
+                        <li class="flex items-center space-x-3"><span class="p-2 bg-purple-100 text-purple-600 rounded-lg"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg></span><span class="text-gray-700">Literature Circle</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm col-span-2">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800">Upcoming Tests</h3>
+                        <span class="text-sm text-gray-500">Running</span>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex flex-col items-center justify-center w-14 h-16 bg-gray-100 rounded-xl"><span class="text-xs text-gray-500">Oct</span><span class="text-xl font-bold text-gray-800">25</span></div>
+                            <div>
+                                <h4 class="text-gray-800 font-medium">Physics Midterm - Oct 25</h4>
+                                <p class="text-sm text-gray-500">Subject</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex flex-col items-center justify-center w-14 h-16 bg-gray-100 rounded-xl"><span class="text-xs text-gray-500">Oct</span><span class="text-xl font-bold text-gray-800">25</span></div>
+                            <div>
+                                <h4 class="text-gray-800 font-medium">Literature Quiz - Nov 1</h4>
+                                <p class="text-sm text-gray-500">Subject</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex flex-col items-center justify-center w-14 h-16 bg-gray-100 rounded-xl"><span class="text-xs text-gray-500">Nov</span><span class="text-xl font-bold text-gray-800">1</span></div>
+                            <div>
+                                <h4 class="text-gray-800 font-medium">Literature Quiz - Nov 8</h4>
+                                <p class="text-sm text-gray-500">Subject</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex flex-col items-center justify-center w-14 h-16 bg-gray-100 rounded-xl"><span class="text-xs text-gray-500">Nov</span><span class="text-xl font-bold text-gray-800">1</span></div>
+                            <div>
+                                <h4 class="text-gray-800 font-medium">Literature Cnees - Nov 13</h4>
+                                <p class="text-sm text-gray-500">Subject</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-6">Overall Progress</h3>
+                    <div class="flex justify-center mb-6">
+                        <div class="w-32 h-32 rounded-full flex items-center justify-center relative progress-ring">
+                            <div class="w-24 h-24 bg-white rounded-full flex flex-col items-center justify-center absolute">
+                                <span class="text-2xl font-bold text-gray-800">85%</span>
+                                <span class="text-xs text-gray-500">Completion</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between"><span class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>Understanding:</span><span class="font-semibold">85%</span></li>
+                        <li class="flex justify-between"><span class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Application:</span><span class="font-semibold">78%</span></li>
+                        <li class="flex justify-between"><span class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>Understanding:</span><span class="font-semibold">78%</span></li>
+                        <li class="flex justify-between"><span class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Designing:</span><span class="font-semibold">62%</span></li>
+                        <li class="flex justify-between"><span class="flex items-center"><span class="w-2 h-2 bg-pink-400 rounded-full mr-2"></span>Leastonng:</span><span class="font-semibold">26%</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Upcoming Tests</h3>
+                    <p class="text-sm text-gray-500 mb-6">Upcoming tests recent'des ates</p>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-green-100 text-green-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Biology Unit 3: Genetics</h4>
+                                    <p class="text-sm text-gray-500">January 25, 2023</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" /></svg></button>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-blue-100 text-blue-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">History Essay Outline</h4>
+                                    <p class="text-sm text-gray-500">January 25, 2023</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" /></svg></button>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-purple-100 text-purple-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Math Formulas</h4>
+                                    <p class="text-sm text-gray-500">January 25, 2023</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" /></svg></button>
+                        </li>
+                         <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-green-100 text-green-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Design Thinking Class</h4>
+                                    <p class="text-sm text-gray-500">January 25, 2023</p>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" /></svg></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">My Communities</h3>
+                    <p class="text-sm text-gray-500 mb-6">My communities group</p>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-blue-100 text-blue-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">AP Chem Study Group</h4>
+                                    <p class="text-sm text-gray-500">11 groups - 15 members</p>
+                                </div>
+                            </div>
+                            <div class="flex -space-x-2">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=A+B&background=random" alt="">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=C+D&background=random" alt="">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://ui-avatars.com/api/?name=E+F&background=random" alt="">
+                            </div>
+                        </li>
+                         <li class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-green-100 text-green-600 rounded-xl">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Design Thinking Class</h4>
+                                    <p class="text-sm text-gray-500">11 groups - 13 members</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 text-sm font-medium hover:underline">See all</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chakravyuh 2.0 | Galactic Hackathon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              space: {
+                black: '#050505',
+                dark: '#0B0B0C',
+                light: '#1F1F24',
+                accent: '#F39041',
+                neon: '#6366f1',
+                glass: 'rgba(255, 255, 255, 0.05)'
+              }
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              orbitron: ['Orbitron', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 60s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        background-color: #020205; /* Deep dark blue-black */
+        overflow: hidden;
+        color: white;
+      }
+
+      /* --- Beautiful Blue Starfield Animation --- */
+      .star-layer {
+        position: fixed;
+        top: 0; left: 0; width: 200%; height: 200%;
+        background: transparent;
+        z-index: -1;
+        animation: starMove 100s linear infinite;
+      }
+
+      /* Small Stars */
+      .stars-1 {
+        background-image: 
+          radial-gradient(1px 1px at 100px 100px, rgba(150, 200, 255, 0.8), transparent),
+          radial-gradient(1px 1px at 200px 400px, rgba(150, 200, 255, 0.8), transparent),
+          radial-gradient(1px 1px at 400px 100px, rgba(150, 200, 255, 0.8), transparent),
+          radial-gradient(1.5px 1.5px at 500px 500px, rgba(150, 200, 255, 0.8), transparent),
+          radial-gradient(1px 1px at 800px 200px, rgba(150, 200, 255, 0.8), transparent);
+        background-size: 550px 550px;
+        opacity: 0.8;
+        animation-duration: 150s;
+      }
+
+      /* Medium Stars */
+      .stars-2 {
+        background-image: 
+          radial-gradient(2px 2px at 150px 300px, rgba(100, 150, 255, 1), transparent),
+          radial-gradient(2px 2px at 600px 600px, rgba(100, 150, 255, 1), transparent);
+        background-size: 800px 800px;
+        opacity: 0.6;
+        animation-duration: 200s;
+      }
+
+      /* Large Glowing Stars */
+      .stars-3 {
+        background-image: 
+          radial-gradient(3px 3px at 300px 200px, rgba(200, 220, 255, 1), transparent),
+          radial-gradient(2px 2px at 700px 100px, rgba(200, 220, 255, 1), transparent);
+        background-size: 1200px 1200px;
+        opacity: 0.4;
+        animation-duration: 250s;
+      }
+
+      @keyframes starMove {
+        from { transform: translateY(0) translateX(0); }
+        to { transform: translateY(-100px) translateX(-50px); }
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(243, 144, 65, 0.5);
+        border-radius: 10px;
+      }
+      
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="star-layer stars-1"></div>
+    <div class="star-layer stars-2"></div>
+    <div class="star-layer stars-3"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
