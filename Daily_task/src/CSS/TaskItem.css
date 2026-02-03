@@ -1,0 +1,53 @@
+.task-item {
+  display: flex;
+  align-items: center;
+}
+
+.task-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.task-checkbox--emerald {
+  border-radius: 999px;
+  accent-color: #10b981;
+}
+
+.task-checkbox--indigo {
+  border-radius: 0.375rem;
+  accent-color: #6366f1;
+}
+
+.task-text {
+  margin-left: 1rem;
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: #475569;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.task-text--done {
+  color: #cbd5e1;
+  text-decoration: line-through;
+}
+
+.task-remove {
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.task-remove:hover {
+  color: #f87171;
+  background: #fef2f2;
+}

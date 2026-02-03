@@ -1,0 +1,13 @@
+.app-footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.app-footer__text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+  margin: 0;
+}

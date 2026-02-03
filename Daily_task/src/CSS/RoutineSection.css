@@ -1,0 +1,23 @@
+.routine {
+  width: 100%;
+}
+
+.routine-card {
+  height: 100%;
+}
+
+.routine-title {
+  margin-bottom: 2rem;
+}
+
+.routine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .routine {
+    grid-column: span 5;
+  }
+}
